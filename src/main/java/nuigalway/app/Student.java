@@ -1,24 +1,24 @@
 package nuigalway.app;
 import java.util.ArrayList;
+import org.joda.time.DateTime;
 
 public class Student {
 
 	private String name;
 	private int age;
-	private String dob;
+	private DateTime dob;
 	private int id;
 	private String username;
 	private String course;
-	private ArrayList<String> modules = new ArrayList<>();
+	private ArrayList<Module> modules = new ArrayList<>();
 
-	public Student(String name, int age, String dob, int id, String username, String course, ArrayList<String> modules) {
+	public Student(String name, int age, DateTime dob, int id, String course, ArrayList<Module> modules) {
 		this.name = name;
 		this.age = age;
 		this.dob = dob;
 		this.id = id;
-		this.username = username;
 		this.course = course;
-		this.setModules(modules);
+		this.modules = modules;
 	}
 
 	public String getName() {
@@ -37,11 +37,11 @@ public class Student {
 		this.age = age;
 	}
 
-	public String getDob() {
+	public DateTime getDob() {
 		return dob;
 	}
 
-	public void setDob(String dob) {
+	public void setDob(DateTime dob) {
 		this.dob = dob;
 	}
 
@@ -54,7 +54,8 @@ public class Student {
 	}
 
 	public String getUsername() {
-		return getName() + getAge();
+		username = getName() + getAge();
+		return username;
 	}
 
 	public void setUsername(String username) {
@@ -69,11 +70,11 @@ public class Student {
 		this.course = course;
 	}
 
-	public ArrayList<String> getModules() {
+	public ArrayList<Module> getModules() {
 		return modules;
 	}
 
-	public void setModules(ArrayList<String> modules) {
+	public void setModules(ArrayList<Module> modules) {
 		this.modules = modules;
 	}
 

@@ -8,12 +8,10 @@ public class Module {
 	private ArrayList<Student> students = new ArrayList<>();
 	private ArrayList<Course> courses = new ArrayList<>();
 	
-	public Module(String name, int id, ArrayList<Student> students, ArrayList<Course> courses) {
+	public Module(String name, int id) {
 		super();
 		this.name = name;
 		this.id = id;
-		this.students = students;
-		this.courses = courses;
 	}
 
 	public String getName() {
