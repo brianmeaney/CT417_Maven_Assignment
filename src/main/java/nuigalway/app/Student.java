@@ -54,7 +54,7 @@ public class Student {
 	}
 
 	public String getUsername() {
-		username = getName() + getAge();
+		username = (getName() + getAge()).toString();
 		return username;
 	}
 
